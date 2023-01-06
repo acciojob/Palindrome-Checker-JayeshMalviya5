@@ -1,18 +1,18 @@
 // complete the given function
 
 function palindrome(str){
-    // get the total length of the words  
-    const len = str.length;  
-	str.toLowerCase();
-  
-    // Use for loop to divide the words into 2 half  
-    for (let i = 0; i < len / 2; i++) {  
-  
-        // validate the first and last characters are same  
-        if (str[i] !== str[len - 1 - i]) {  
-            return false; 
-        }  
-    }  
-    return true;
+    let a = str.toLowerCase()
+    if(str.length==1 || str==null)
+      return true
+  let high = str.length-1;
+  let low = 0;
+  while(low<=high){
+     if(a.charAt(low)!=a.charAt(high)){
+        return false;
+     }
+     ++low;
+     --high;
+  }
+  return true;
 }
 module.exports = palindrome
