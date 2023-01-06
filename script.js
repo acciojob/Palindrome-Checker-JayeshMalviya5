@@ -5,7 +5,7 @@ function palindrome(str){
       return true
   let high = str.length-1;
   let low = 0;
-  while(low<=high){
+  while(low<high){
      if(str.charAt(low)!=str.charAt(high)){
         return false;
      }
